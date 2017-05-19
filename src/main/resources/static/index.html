@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="planning-poker" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="planning-poker" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="planning-poker" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="planning-poker" class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+
+    <title>Signin for Planning Poker</title>
+
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.css">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for planning poker -->
+    <link href="/css/app.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/js/ie10-viewport-bug-workaround.js"></script>
+
+    <script src="/webjars/angularjs/1.5.9/angular.js"></script>
+    <script src="/webjars/angularjs/1.5.9/angular-resource.js"></script>
+    <script src="/webjars/angularjs/1.5.9/angular-route.js"></script>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/controller.js"></script>
+</head>
+
+<body ng-app="planning-poker">
+<div ng-controller="login as ctrl" class="container">
+    <ul class="nav nav-pills" role="tablist">
+        <li class="active"><a href="#/">home</a></li>
+        <li><a href="#/login">login</a></li>
+        <li ng-show="authenticated"><a href="" ng-click="ctrl.logout()">logout</a></li>
+    </ul>
+</div>
+<div ng-view class="container"></div>
+</body>
+
+</html>
