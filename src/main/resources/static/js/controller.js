@@ -46,9 +46,8 @@ app.controller('login', function ($rootScope, $http, $location) {
 });
 
 app.controller('home', function ($http) {
-
-
-
-    this.greeting = {id: '123', content: 'description'}
-
+    var self = this;
+    $http.get('http://localhost:9000/', function (response) {
+        this.greeting = response.data;
+    });
 });
